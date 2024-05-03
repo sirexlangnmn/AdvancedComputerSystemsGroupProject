@@ -14,7 +14,12 @@ exports.uploads2 = async (req, res) => {
     const file = req.file;
     console.log('file : ', file)
 
+
+    console.log('file.path : ', file.path)
     const fileContent = fs.readFileSync(file.path);
+
+
+    console.log('fileContent : ', fileContent)
 
     const params = {
       Bucket: BUCKET_NAME,
